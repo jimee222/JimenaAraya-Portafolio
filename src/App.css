@@ -1,0 +1,40 @@
+
+/* Variables de colores y fuentes personalizadas */
+:root {
+  --color-principal: #2B2D42;   /* Azul espacial oscuro */
+  --color-secundario: #8D99AE;  /* Gris azulado */
+  --color-acento: #EF223C;      /* Rojo Pantone */
+  --color-texto: #F5F5F5;       /* Blanco-gris claro para texto */
+
+  --fuente-titulos: 'Montserrat', sans-serif;
+  --fuente-parrafos: 'Open Sans', sans-serif;
+}
+
+/* Aplicar fondo y colores por defecto */
+body {
+  margin: 0;
+  background-color: var(--color-principal);
+  color: var(--color-texto);
+  font-family: var(--fuente-parrafos);
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-acento);
+}
+
+/* Botones generales */
+button {
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c9182b;
+}
