@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import logo from "../../public/logo.png";
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
   useEffect(() => {
@@ -6,12 +7,12 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
   }, [menuOpen]);
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[#2B2D42]/80 backdrop-blur-md border-b border-white/10 shadow-md">
+    <nav className="top-0 fixed w-full z-40 bg-[#000] backdrop-blur-md border-b border-white/10 shadow-md">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2">
-            <img src="/logo.png" alt="Jimena Araya Logo" className="h-10 w-auto" />
+            <img src={logo} alt="Jimena Araya Logo" className="h-10 w-auto" />
           </a>
 
           {/* Botón menú móvil */}
@@ -33,7 +34,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               <a
                 key={href}
                 href={href}
-                className="text-[#EDF2F4] hover:text-[#EF233C] font-medium transition-colors"
+                className="text-[#EDF2F4] hover:text-[#8c52ff] font-medium transition-colors"
               >
                 {label}
               </a>

@@ -4,30 +4,39 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
-import { About } from "./components/sections/About";
-import { Projects } from "./components/sections/Projects";
+import { AboutMe } from "./components/sections/AboutMe";
 import "./index.css";
 import { Contact } from "./components/sections/Contact";
+import { Education } from "./components/sections/Education";
+import { Proyects } from "./components/sections/Proyects";
+import { Grid, ThemeProvider } from "@mui/material";
+import { theme } from "./theme";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
-      <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"
-        }`} style={{ backgroundColor: "var(--color-principal)", color: "var(--color-texto)" }}
-      >
-
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
-      </div>
-    </>
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Grid container sx={{ bgcolor: "#000", mt: 5 }}>
+        <Grid size={12}>
+          <Home />
+        </Grid>
+        <Grid size={12} sx={{ marginTop: "40px" }}>
+          <AboutMe />
+        </Grid>
+        <Grid size={12} sx={{ marginTop: "40px" }}>
+          <Education />
+        </Grid>
+        <Grid size={12} sx={{ marginTop: "40px" }}>
+          <Proyects />
+        </Grid>
+      </Grid>
+      <Contact />
+    </ThemeProvider>
   );
 }
 

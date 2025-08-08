@@ -1,9 +1,9 @@
 
 /* Variables de colores y fuentes personalizadas */
 :root {
-  --color-principal: #2B2D42;   /* Azul espacial oscuro */
+    /* Azul espacial oscuro */
   --color-secundario: #8D99AE;  /* Gris azulado */
-  --color-acento: #EF223C;      /* Rojo Pantone */
+  --color-acento: #8c52ff;      /* Rojo Pantone */
   --color-texto: #F5F5F5;       /* Blanco-gris claro para texto */
 
   --fuente-titulos: 'Montserrat', sans-serif;
@@ -13,7 +13,7 @@
 /* Aplicar fondo y colores por defecto */
 body {
   margin: 0;
-  background-color: var(--color-principal);
+  background-color: #8c52ff;
   color: var(--color-texto);
   font-family: var(--fuente-parrafos);
 }
@@ -36,5 +36,5 @@ button {
 }
 
 button:hover {
-  background-color: #c9182b;
+  background-color: #8c52ff;
 }

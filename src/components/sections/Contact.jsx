@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import { Grid, Box, Button, Link, TextField, Typography } from "@mui/material";
+import { RevealOnScroll } from "../RevealOnScroll";
+import contact from "../../../public/contact.png";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,90 +25,172 @@ export const Contact = () => {
         alert("Mensaje enviado con éxito.");
         setFormData({ name: "", email: "", message: "" });
       })
-      .catch(() =>
-        alert("Oops! Algo salió mal. Intenta de nuevo más tarde.")
-      );
+      .catch(() => alert("Oops! Algo salió mal. Intenta de nuevo más tarde."));
   };
 
   return (
-    <section
-      id="contact"
-      className="min-h-screen flex items-center justify-center py-20 bg-[#2B2D42] text-[#EDF2F4]"
-    >
+    <Box component="section" id="contact">
       <RevealOnScroll>
-        <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-[#EF233C] to-[#D90429] bg-clip-text text-transparent text-center">
-            Contáctame
-          </h2>
+        <Grid
+          container
+          sx={{ backgroundColor: "#8c52ff", p: 2 }}
+          spacing={3}
+          justifyContent="center"
+        >
+          <Grid
+            size={{ xs: 12, md: 10 }}
+            sx={{ mt: "100px" }}
+            display="flex"
+            justifyContent="center"
+          >
+            <Box
+              component="img"
+              src={contact}
+              alt="Contact me"
+              sx={{ width: 250, maxWidth: "100%" }}
+            />
+          </Grid>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="relative">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                value={formData.name}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white placeholder-[#8D99AE] transition focus:outline-none focus:border-[#EF233C] focus:bg-[#EF233C]/5"
-                placeholder="Nombre completo..."
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-              />
-            </div>
-
-            <div className="relative">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                value={formData.email}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white placeholder-[#8D99AE] transition focus:outline-none focus:border-[#EF233C] focus:bg-[#EF233C]/5"
-                placeholder="correo@ejemplo.com"
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
-            </div>
-
-            <div className="relative">
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={5}
-                value={formData.message}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white placeholder-[#8D99AE] transition focus:outline-none focus:border-[#EF233C] focus:bg-[#EF233C]/5"
-                placeholder="Tu mensaje..."
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-[#EF233C] text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(239,35,60,0.4)]"
+          <Grid size={{ xs: 12 }} display="flex" justifyContent="center">
+            <Box
+              component="form"
+              onSubmit={handleSubmit}
+              sx={{
+                width: "100%",
+                minWidth: 300,
+                maxWidth: 500,
+                p: 3,
+              }}
             >
-              Enviar mensaje
-            </button>
-          </form>
+              {/* Nombre */}
+              <Box sx={{ mb: 2, color: "white" }}>
+                <TextField
+                  fullWidth
+                  required
+                  id="name"
+                  name="name"
+                  placeholder="Nombre completo..."
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData((s) => ({ ...s, name: e.target.value }))
+                  }
+                  variant="outlined"
+                  InputProps={{
+                    sx: {
+                      color: "white",
+                      backgroundColor: "#8c52ff",
+                      "& input::placeholder": { color: "#fff", opacity: 1 },
+                      "& fieldset": { borderColor: "#fff" },
+                      "&:hover fieldset": { borderColor: "#8c52ff" },
+                      "&.Mui-focused fieldset": { borderColor: "#5e17eb" },
+                    },
+                  }}
+                />
+              </Box>
 
-          {/* Enlace a LinkedIn */}
-          <div className="mt-8 text-center">
-            <p className="text-[#8D99AE]">También puedes visitarme en:</p>
-            <a
-              href="https://www.linkedin.com/in/jimena-araya-4b2093372/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#EF233C] hover:text-[#D90429] font-medium transition"
-            >
-              LinkedIn → /jimena-araya
-            </a>
-          </div>
-        </div>
+              {/* Email */}
+              <Box sx={{ mb: 2 }}>
+                <TextField
+                  fullWidth
+                  required
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="correo@ejemplo.com"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData((s) => ({ ...s, email: e.target.value }))
+                  }
+                  variant="outlined"
+                  InputProps={{
+                    sx: {
+                      color: "white",
+                      backgroundColor: "#8c52ff",
+                      "& input::placeholder": { color: "#fff", opacity: 1 },
+                      "& fieldset": { borderColor: "#fff" },
+                      "&:hover fieldset": { borderColor: "#8c52ff" },
+                      "&.Mui-focused fieldset": { borderColor: "#5e17eb" },
+                    },
+                  }}
+                />
+              </Box>
+
+              <Box sx={{ mb: 3 }}>
+                <TextField
+                  fullWidth
+                  required
+                  id="message"
+                  name="message"
+                  placeholder="Tu mensaje..."
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData((s) => ({ ...s, message: e.target.value }))
+                  }
+                  variant="outlined"
+                  multiline
+                  rows={5}
+                  InputProps={{
+                    sx: {
+                      color: "white",
+                      backgroundColor: "#8c52ff",
+                      "& textarea::placeholder": { color: "#fff", opacity: 1 },
+                      "& fieldset": { borderColor: "#fff" },
+                      "&:hover fieldset": { borderColor: "#8c52ff" },
+                      "&.Mui-focused fieldset": { borderColor: "#5e17eb" },
+                    },
+                  }}
+                />
+              </Box>
+
+              {/* Botón submit */}
+              <Grid size={12} sx={{ mb: 1 }}>
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="secondary"
+                  sx={{
+                    color: "white",
+                    py: 1.5,
+                    background: "#5e17eb",
+                    textTransform: "none",
+                    fontWeight: 500,
+                    boxShadow: "none",
+                    transition: "transform 0.15s ease, box-shadow 0.15s ease",
+                    "&:hover": {
+                      background: "#5e17eb",
+                      transform: "translateY(-2px)",
+                    },
+                  }}
+                >
+                  Enviar mensaje
+                </Button>
+              </Grid>
+
+              {/* Enlace a LinkedIn */}
+              <Box sx={{ mt: 3, textAlign: "center" }}>
+                <Typography sx={{ color: "#fff" }}>
+                  También puedes visitarme en:
+                </Typography>
+                <Link
+                  href="https://www.linkedin.com/in/jimena-araya-4b2093372/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  underline="hover"
+                  sx={{
+                    color: "#fff",
+                    fontWeight: "bold",
+                    transition: "color 0.2s ease",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
+                  LinkedIn → /jimena-araya
+                </Link>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
       </RevealOnScroll>
-    </section>
+    </Box>
   );
 };
