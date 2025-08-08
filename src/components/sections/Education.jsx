@@ -18,17 +18,20 @@ export const Education = () => {
     <RevealOnScroll>
       <Grid
         container
+        sx={{ bgcolor: "#000", p: 2, height: "100vh" }}
         spacing={3}
-        sx={{ bgcolor: "#000", p: 2 }}
         justifyContent="center"
+        alignContent="center"
       >
+        <Grid size={{ xs: 12, md: 10 }} sx={{ mt: "100px" }}>
+          <img src={education} width="250px" alt="Education" />
+        </Grid>
         <Grid
           size={{ xs: 12, md: 10 }}
           sx={{ marginTop: "20px" }}
           align="center"
         >
           <Stack spacing={3}>
-            <img src={education} width="250px" alt="Education" />
             <Stack textAlign="left">
               <Typography fontWeight="bold" variant="h6">
                 Ingeniería del Software

@@ -33,7 +33,7 @@ export const Contact = () => {
     <Box component="section" id="contact">
       <Grid
         container
-        sx={{ backgroundColor: "#8c52ff", p: 2 }}
+        sx={{ backgroundColor: "#8c52ff", p: 2, height: "100vh" }}
         spacing={3}
         justifyContent="center"
       >
