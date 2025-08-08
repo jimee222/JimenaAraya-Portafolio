@@ -28,9 +28,6 @@ function App() {
         <Grid size={12} sx={{ marginTop: "10vh" }}>
           <AboutMe />
         </Grid>
-        <Grid size={12} sx={{ marginTop: "10vh" }}>
-          <Education />
-        </Grid>
         <Grid size={12} sx={{ marginTop: "80px" }}>
           <Proyects />
         </Grid>

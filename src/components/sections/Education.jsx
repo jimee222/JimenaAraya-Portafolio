@@ -16,21 +16,11 @@ export const Education = () => {
 
   return (
     <RevealOnScroll>
-      <Grid
-        container
-        sx={{ bgcolor: "#000", p: 2, height: "100vh" }}
-        spacing={3}
-        justifyContent="center"
-        alignContent="center"
-      >
-        <Grid size={{ xs: 12, md: 10 }} sx={{ mt: "100px" }}>
+      <Grid container spacing={3} justifyContent="center" alignContent="center">
+        <Grid size={{ xs: 12 }}>
           <img src={education} width="250px" alt="Education" />
         </Grid>
-        <Grid
-          size={{ xs: 12, md: 10 }}
-          sx={{ marginTop: "20px" }}
-          align="center"
-        >
+        <Grid size={{ xs: 12 }} align="center">
           <Stack spacing={3}>
             <Stack textAlign="left">
               <Typography fontWeight="bold" variant="h6">
@@ -53,7 +43,7 @@ export const Education = () => {
             </Stack>
           </Stack>
         </Grid>
-        <Grid size={{ xs: 12, md: 10 }}>
+        <Grid size={{ xs: 12 }}>
           <Grid container spacing={3}>
             {images.map(({ src, alt }, id) => (
               <Grid

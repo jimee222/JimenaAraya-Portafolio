@@ -30,20 +30,16 @@ export const Contact = () => {
   };
 
   return (
-    <Box component="section" id="contact">
+    <section id="contact">
       <Grid
         container
-        sx={{ backgroundColor: "#8c52ff", p: 2, height: "100vh" }}
+        sx={{ backgroundColor: "#8c52ff", p: 2, minHeight: "100vh" }}
         spacing={3}
         justifyContent="center"
       >
         <Grid size={{ xs: 12, md: 10 }} sx={{ mt: "100px" }}>
-          <Box
-            component="img"
-            src={contact}
-            alt="Contact me"
-            sx={{ width: 250, maxWidth: "100%" }}
-          />
+        
+          <img src={contact} width="250px" alt="Contact Me" />
         </Grid>
 
         <Grid size={{ xs: 12, md: 5 }}>
@@ -175,11 +171,10 @@ export const Contact = () => {
             </Box>
           </Box>
         </Grid>
-
         <Grid size={{ xs: 12, md: 5 }}>
           <MailBox />
         </Grid>
       </Grid>
-    </Box>
+    </section>
   );
 };

@@ -3,6 +3,7 @@ import frontend from "../../../public/frontend.png";
 import backend from "../../../public/backend.png";
 import about from "../../../public/about.png";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { Education } from "./Education";
 
 export const AboutMe = () => {
   return (
@@ -10,7 +11,7 @@ export const AboutMe = () => {
       <RevealOnScroll>
         <Grid
           container
-          sx={{ bgcolor: "#000", p: 2, height: "100vh" }}
+          sx={{ bgcolor: "#000", p: 2, minHeight: "100vh" }}
           spacing={3}
           justifyContent="center"
           alignContent="center"
@@ -187,6 +188,9 @@ export const AboutMe = () => {
                 />
               </Stack>
             </Stack>
+          </Grid>
+          <Grid size={{ xs: 12, md: 10 }}>
+            <Education />
           </Grid>
         </Grid>
       </RevealOnScroll>

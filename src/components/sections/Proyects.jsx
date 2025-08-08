@@ -16,7 +16,7 @@ export const Proyects = () => {
           sx={{
             p: 2,
             background: `linear-gradient(180deg,rgba(0, 0, 0, 1) 13%, rgba(151, 99, 255, 1) 92%, rgba(140, 82, 255, 1) 100%)`,
-            height: "100vh",
+            minHeight: "100vh",
           }}
           spacing={3}
           justifyContent="center"
