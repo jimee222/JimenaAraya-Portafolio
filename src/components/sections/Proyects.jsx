@@ -37,6 +37,7 @@ export const Proyects = () => {
               overflow: "hidden",
               "&:hover": {
                 height: "240px",
+                background:"#8c52ff",
                 "& .details": {
                   opacity: 1,
                   visibility: "visible",
@@ -153,6 +154,7 @@ export const Proyects = () => {
               overflow: "hidden",
               "&:hover": {
                 height: "240px",
+                 background:"#8c52ff",
                 "& .details": {
                   opacity: 1,
                   visibility: "visible",
@@ -264,6 +266,7 @@ export const Proyects = () => {
               overflow: "hidden",
               "&:hover": {
                 height: "240px",
+                 background:"#8c52ff",
                 "& .details": {
                   opacity: 1,
                   visibility: "visible",
@@ -379,6 +382,7 @@ export const Proyects = () => {
               overflow: "hidden",
               "&:hover": {
                 height: "240px",
+                 background:"#8c52ff",
                 "& .details": {
                   opacity: 1,
                   visibility: "visible",

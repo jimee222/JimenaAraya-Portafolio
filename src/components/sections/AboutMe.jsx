@@ -2,6 +2,9 @@ import { Chip, Grid, Stack, Typography } from "@mui/material";
 import frontend from "../../../public/frontend.png";
 import backend from "../../../public/backend.png";
 import about from "../../../public/about.png";
+import mision from "../../../public/mision.png";
+import valores from "../../../public/valores.png";
+import vision from "../../../public/vision.png";
 import { RevealOnScroll } from "../RevealOnScroll";
 import { Education } from "./Education";
 
@@ -189,8 +192,202 @@ export const AboutMe = () => {
               </Stack>
             </Stack>
           </Grid>
-          <Grid size={{ xs: 12, md: 10 }}>
+          <Grid size={{ xs: 12, md: 10 }} sx={{ mt: 3, mb: 3 }}>
             <Education />
+          </Grid>
+
+          <Grid
+            size={{ xs: 12, md: 3.3 }}
+            sx={{
+              p: 3,
+              height: "160px",
+              bgcolor: "#000",
+              border: "1px solid #8c52ff",
+              borderRadius: "10px",
+              transition: "all 0.3s ease-in-out",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              "&:hover": {
+                height: "200px",
+                border: "1px solid #8c52ff",
+                "& .hover-chips": {
+                  opacity: 1,
+                  visibility: "visible",
+                  height: "auto",
+                  transform: "translateY(0)",
+                },
+                "& .hover-image": {
+                  transform: "translateY(-10px)",
+                },
+              },
+            }}
+          >
+            <Stack
+              spacing={1}
+              justifyContent="center"
+              alignItems="center"
+              sx={{ height: "100%" }}
+            >
+              <img
+                src={mision}
+                alt="Mision"
+                className="hover-image"
+                style={{
+                  width: "60%",
+                  objectFit: "contain",
+                  display: "block",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+              <Stack
+                className="hover-chips"
+                sx={{
+                  opacity: 0,
+                  visibility: "hidden",
+                  height: 0,
+                  overflow: "hidden",
+                  transform: "translateY(10px)",
+                  transition:
+                    "opacity 0.3s ease, transform 0.3s ease, height 0.3s ease",
+                }}
+              >
+                <Typography variant="body2">
+                  Desarrollar soluciones digitales eficientes y funcionales que
+                  respondan a las necesidades reales de usuarios y empresas.
+                </Typography>
+              </Stack>
+            </Stack>
+          </Grid>
+          <Grid
+            size={{ xs: 12, md: 3.3 }}
+            sx={{
+              p: 3,
+              height: "160px",
+              bgcolor: "#000",
+              border: "1px solid #8c52ff",
+              borderRadius: "10px",
+              transition: "all 0.3s ease-in-out",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              "&:hover": {
+                height: "200px",
+                border: "1px solid #8c52ff",
+                "& .hover-chips": {
+                  opacity: 1,
+                  visibility: "visible",
+                  height: "auto",
+                  transform: "translateY(0)",
+                },
+                "& .hover-image": {
+                  transform: "translateY(-10px)",
+                },
+              },
+            }}
+          >
+            <Stack
+              spacing={1}
+              justifyContent="center"
+              alignItems="center"
+              sx={{ height: "100%" }}
+            >
+              <img
+                src={vision}
+                alt="Vision"
+                className="hover-image"
+                style={{
+                  width: "60%",
+                  objectFit: "contain",
+                  display: "block",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+              <Stack
+                className="hover-chips"
+                sx={{
+                  opacity: 0,
+                  visibility: "hidden",
+                  height: 0,
+                  overflow: "hidden",
+                  transform: "translateY(10px)",
+                  transition:
+                    "opacity 0.3s ease, transform 0.3s ease, height 0.3s ease",
+                }}
+              >
+                <Typography variant="body2">
+                  Convertirme en una profesional reconocida por el diseño de
+                  productos tecnológicos innovadores, accesibles y con impacto
+                  positivo.
+                </Typography>
+              </Stack>
+            </Stack>
+          </Grid>
+          <Grid
+            size={{ xs: 12, md: 3.3 }}
+            sx={{
+              p: 3,
+              height: "160px",
+              bgcolor: "#000",
+              border: "1px solid #8c52ff",
+              borderRadius: "10px",
+              transition: "all 0.3s ease-in-out",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              "&:hover": {
+                height: "200px",
+                border: "1px solid #8c52ff",
+                "& .hover-chips": {
+                  opacity: 1,
+                  visibility: "visible",
+                  height: "auto",
+                  transform: "translateY(0)",
+                },
+                "& .hover-image": {
+                  transform: "translateY(-10px)",
+                },
+              },
+            }}
+          >
+            <Stack
+              spacing={1}
+              justifyContent="center"
+              alignItems="center"
+              sx={{ height: "100%" }}
+            >
+              <img
+                src={valores}
+                alt="Valores"
+                className="hover-image"
+                style={{
+                  width: "60%",
+                  objectFit: "contain",
+                  display: "block",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+              <Stack
+                className="hover-chips"
+                sx={{
+                  opacity: 0,
+                  visibility: "hidden",
+                  height: 0,
+                  overflow: "hidden",
+                  transform: "translateY(10px)",
+                  transition:
+                    "opacity 0.3s ease, transform 0.3s ease, height 0.3s ease",
+                }}
+              >
+                <Typography variant="body2">
+                  <li>Responsabilidad</li>
+                  <li>Curiosidad</li>
+                  <li>Empatía</li>
+                  <li>Superación</li>
+                  <li>Honestidad</li>
+                </Typography>
+              </Stack>
+            </Stack>
           </Grid>
         </Grid>
       </RevealOnScroll>

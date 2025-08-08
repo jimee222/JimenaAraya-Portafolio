@@ -8,7 +8,7 @@ export const Home = () => {
     <section id="home">
       <Grid
         container
-        sx={{ p: 2, bgcolor: "#000", height: "100vh" }}
+        sx={{ p: 2, bgcolor: "#000", height: "80vh" }}
         spacing={3}
         justifyContent="center"
         alignItems="center"

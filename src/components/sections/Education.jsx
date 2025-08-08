@@ -61,6 +61,7 @@ export const Education = () => {
                   justifyContent: "center",
                   "&:hover": {
                     height: "125px",
+                    background: "#8c52ff",
                     border: "1px solid #8c52ff",
                   },
                 }}
