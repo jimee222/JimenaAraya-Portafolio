@@ -27,8 +27,8 @@ export const AboutMe = () => {
         <Grid
           size={{ xs: 12, md: 5 }}
           sx={{
-            p: 1,
-            height: "140px",
+            p: 3,
+            height: "160px",
             bgcolor: "#000",
             border: "1px solid #8c52ff",
             borderRadius: "10px",
@@ -61,7 +61,7 @@ export const AboutMe = () => {
               src={frontend}
               alt={"Frontend"}
               style={{
-                maxWidth: "60%",
+                width: "60%",
                 objectFit: "contain",
                 display: "block",
                 transition: "transform 0.3s ease",
@@ -107,8 +107,8 @@ export const AboutMe = () => {
         <Grid
           size={{ xs: 12, md: 5 }}
           sx={{
-            p: 1,
-            height: "140px",
+            p: 3,
+            height: "160px",
             bgcolor: "#000",
             border: "1px solid #8c52ff",
             borderRadius: "10px",
@@ -142,7 +142,7 @@ export const AboutMe = () => {
               alt="Backend"
               className="hover-image"
               style={{
-                maxWidth: "60%",
+                width: "60%",
                 objectFit: "contain",
                 display: "block",
                 transition: "transform 0.3s ease",

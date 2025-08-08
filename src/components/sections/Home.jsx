@@ -1,7 +1,7 @@
-import { RevealOnScroll } from "../RevealOnScroll";
-import { Box, Chip, Grid, Stack, Typography } from "@mui/material";
+import { Grid, IconButton, Stack, Typography } from "@mui/material";
 import profile from "../../../public/profile.png";
 import presentation from "../../../public/presentation.png";
+import { LinkedIn, Mail, GitHub } from "@mui/icons-material";
 
 export const Home = () => {
   return (
@@ -34,6 +34,23 @@ export const Home = () => {
               orientados a resolver problemas reales. Apasionada por la
               innovación, la eficiencia y el diseño centrado en el usuario.
             </Typography>
+            <Stack direction="row">
+              <IconButton
+                color="secondary"
+                href="https://www.linkedin.com/in/jimena-araya-4b2093372/"
+              >
+                <LinkedIn />
+              </IconButton>
+              <IconButton color="secondary">
+                <Mail />
+              </IconButton>
+              <IconButton
+                color="secondary"
+                href="https://github.com/jimee222"
+              >
+                <GitHub />
+              </IconButton>
+            </Stack>
           </Stack>
         </Grid>
       </Grid>

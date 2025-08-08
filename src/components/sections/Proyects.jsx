@@ -23,6 +23,7 @@ export const Proyects = () => {
           <Grid size={{ xs: 12, md: 10 }} sx={{ mt: "100px" }}>
             <img src={proyects} width="250px" alt="About me" />
           </Grid>
+          
           <Grid
             size={{ xs: 12, md: 5 }}
             sx={{

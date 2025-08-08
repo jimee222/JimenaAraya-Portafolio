@@ -21,21 +21,23 @@ function App() {
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Grid container sx={{ bgcolor: "#000", mt: 5 }}>
+      <Grid container sx={{ bgcolor: "#000" }}>
         <Grid size={12}>
           <Home />
         </Grid>
-        <Grid size={12} sx={{ marginTop: "40px" }}>
+        <Grid size={12} sx={{ marginTop: "10vh" }}>
           <AboutMe />
         </Grid>
-        <Grid size={12} sx={{ marginTop: "40px" }}>
+        <Grid size={12} sx={{ marginTop: "10vh" }}>
           <Education />
         </Grid>
-        <Grid size={12} sx={{ marginTop: "40px" }}>
+        <Grid size={12} sx={{ marginTop: "80px" }}>
           <Proyects />
         </Grid>
+        <Grid size={12}>
+          <Contact />
+        </Grid>
       </Grid>
-      <Contact />
     </ThemeProvider>
   );
 }

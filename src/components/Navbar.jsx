@@ -7,7 +7,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
   }, [menuOpen]);
 
   return (
-    <nav className="top-0 fixed w-full z-40 bg-[#000] backdrop-blur-md border-b border-white/10 shadow-md">
+    <nav className="top-0 sticky w-full z-40 bg-[#000] backdrop-blur-md border-b border-white/10 shadow-md">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
