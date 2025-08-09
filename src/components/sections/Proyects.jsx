@@ -137,6 +137,7 @@ export const Proyects = () => {
                 endIcon={<ArrowForwardIos />}
                 sx={{ color: "white" }}
                 variant="text"
+                href="https://github.com/jimee222/NutriAgenda"
               >
                 Ver proyecto
               </Button>
@@ -249,6 +250,7 @@ export const Proyects = () => {
                 endIcon={<ArrowForwardIos />}
                 sx={{ color: "white" }}
                 variant="text"
+                href="https://github.com/jimee222/Multica"
               >
                 Ver proyecto
               </Button>
@@ -365,6 +367,7 @@ export const Proyects = () => {
                 endIcon={<ArrowForwardIos />}
                 sx={{ color: "white" }}
                 variant="text"
+                href="https://github.com/jimee222/SistemaAcademico"
               >
                 Ver proyecto
               </Button>
@@ -478,6 +481,7 @@ export const Proyects = () => {
                 endIcon={<ArrowForwardIos />}
                 sx={{ color: "white" }}
                 variant="text"
+                href="https://github.com/jimee222/ColaConListaEnlazada"
               >
                 Ver proyecto
               </Button>
